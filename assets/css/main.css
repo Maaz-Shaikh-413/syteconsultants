@@ -50432,14 +50432,14 @@ li.setup-process-item:not(:last-child):before {
 }
 
 .bg-orange {
-  background-color: #ff3951;
+  background-color: #0c4c44;
   color: #fff;
   border: 1px solid transparent;
 }
 .bg-orange:hover {
   background-color: transparent;
-  color: #ff3951;
-  border: 1px solid #ff3951;
+  color: #5cacac;
+  border: 1px solid #5cacac;
 }
 
 .bg-soft-blue {

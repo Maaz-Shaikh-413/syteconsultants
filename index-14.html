@@ -43,11 +43,77 @@
     <!--build:css-->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!--custom css start-->
     <link rel="stylesheet" href="assets/css/custom.css">
     <!--custom css end-->
     <style>
+        .footer-single-col {
+            margin-bottom: 20px;
+        }
+
+        .footer-nav-list li {
+            margin-bottom: 10px;
+        }
+
+        input.input-newsletter {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .footer-top {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .footer-single-col {
+                margin-bottom: 30px;
+            }
+        }
+
+
+        a.d-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-control-prev-custom,
+        .carousel-control-next-custom {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .carousel-control-prev-custom {
+            left: -50px;
+            /* Adjust to move left button to the outside */
+        }
+
+        .carousel-control-next-custom {
+            right: -50px;
+            /* Adjust to move right button to the outside */
+        }
+
+        /* Make icons semi-transparent */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Slightly transparent background */
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        /* Hover effect for buttons */
+        .carousel-control-prev-custom:hover .carousel-control-prev-icon,
+        .carousel-control-next-custom:hover .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
         .content-image-wrapper {
             display: flex;
             justify-content: space-between;
@@ -59,7 +125,7 @@
         a {
             color: orange;
         }
-        
+
         .tab-content {
             flex: 1;
             text-align: left;
@@ -120,7 +186,7 @@
         .section-heading {
             text-align: center;
         }
-        
+
         .tabs-section .section-heading {
             text-align: center;
             font-size: 2.5rem;
@@ -926,97 +992,116 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/1.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/1.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/1-2.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/1-2.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/2.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/2.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/2-1.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/2-1.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/3-1.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/3-1.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/4-2.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/4-2.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/5.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/5.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/6.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/6.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/7.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/7.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/8.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/8.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/9.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/9.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/10.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/10.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/11.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/11.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/12.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/12.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/13.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/13.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/14.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/14.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/15.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/15.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/16.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/16.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="single-logo">
-                                            <img src="assets/img/companies/17.png" class="img-fluid" height="30" alt="logo" />
+                                            <img src="assets/img/companies/17.png" class="img-fluid" height="30"
+                                                alt="logo" />
                                         </div>
                                     </div>
                                 </div>
@@ -1026,7 +1111,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Logo End -->
         <h1 class="section-heading">Our Success</h1>
 
@@ -1086,7 +1171,7 @@
                                 RERA-related matters. Our team comprises dedicated professionals with a deep
                                 understanding of the real estate landscape and a commitment to ensuring compliance with
                                 RERA regulations.</p>
-                                <a href="#" style="color: orange;">Learn more about us</a>
+                            <a href="#" style="color: orange;">Learn more about us</a>
 
                         </div>
 
@@ -1142,75 +1227,153 @@
 
 
         <!-- Service Start -->
-        <section class="digi-services pb-60">
+        <section class="digi-services pb-60 position-relative">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center mb-5">
                             <div>
-                                <span class="span-arrow">Best Digital Agency</span>
+                                <span class="span-arrow"> Our Specialisation </span>
                                 <img src="assets/img/arro-right.svg" alt="arrow" />
                             </div>
                             <h2>
-                                We have extensive Experience in Social
-                                <span class="text-orange">Media Marketing</span>
+                                We have extensive Experience in
+                                <span class="text-orange">Following Sectors</span>
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-6 col-xl-3">
-                        <div class="digi-service-single mb-4 mb-xl-0">
-                            <img src="assets/img/icons/d-1.svg" alt="icon" />
-                            <h3 class="h5">Paid Advertising</h3>
-                            <p>Proactively recaptiualize multidisciplinary manufactured products vis-a-vis go forward
-                                resource
-                                maximizing internal.
-                            </p>
-                            <a href="services.html" class="read-more-link text-decoration-none">Explore More <i
-                                    class="far fa-arrow-right ms-2"></i></a>
+
+                <!-- Start of Carousel -->
+                <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- First slide with 4 cards -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <!-- First 4 Cards -->
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-1.svg" alt="icon" />
+                                        <h3 class="h5">Change In Project Name</h3>
+                                        <p> Why You Might Need to Change Your Project Name
+                                            Rebranding
+                                            You may decide to change your project name as part of a broader rebranding
+                                            strategy to align with your company’s image or market positioning.</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-2.svg" alt="icon" />
+                                        <h3 class="h5">Changes in Bank Account</h3>
+                                        <p>Why Update Bank Account Information
+                                            RERA Compliance
+                                            RERA mandates that all transactions related to real estate projects must
+                                            occur through a designated bank account and by syte consultants. </p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-3.svg" alt="icon" />
+                                        <h3 class="h5">Quarterly Progress Report</h3>
+                                        <p>Our Quarterly Progress Report Services
+                                            Data Collection
+                                            We gather all the necessary project data, including financial, construction,
+                                            and timeline information.
+                                            Report Preparation...</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-4.svg" alt="icon" />
+                                        <h3 class="h5">Project Extension</h3>
+                                        <p>Our Project Extension Expertise
+                                            Regulatory Knowledge
+                                            We are well-versed in RERA regulations and understand the specific
+                                            provisions related to project extension. This knowledge is vital in ensuring
+                                            compliance....</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second slide with 4 more cards -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <!-- Additional 4 Cards -->
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-5.svg" alt="icon" />
+                                        <h3 class="h5">Change in Project Name</h3>
+                                        <p>Why You Might Need to Change Your Project Name
+                                            Rebranding
+                                            You may decide to change your project name as part of a broader rebranding
+                                            strategy to align with your company’s image or market positioning. Legal
+                                            Compliance...</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-6.svg" alt="icon" />
+                                        <h3 class="h5">Changes in Bank Account</h3>
+                                        <p>Why Update Bank Account Information
+                                            RERA Compliance
+                                            RERA mandates that all transactions related to real estate projects must
+                                            occur through a designated bank account. It’s crucial to ensure that the
+                                            correct account details...</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-7.svg" alt="icon" />
+                                        <h3 class="h5">Quarterly Progress Report</h3>
+                                        <p>Our Quarterly Progress Report Services
+                                            Data Collection
+                                            We gather all the necessary project data, including financial, construction,
+                                            and timeline information.
+                                            Report Preparation Our professionals prepare...</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-6 col-md-6 col-xl-3">
+                                    <div class="digi-service-single mb-4 mb-xl-0">
+                                        <img src="assets/img/icons/d-8.svg" alt="icon" />
+                                        <h3 class="h5">Graphic Design</h3>
+                                        <p>Create visually stunning designs to enhance your brand's presence across
+                                            platforms.</p>
+                                        <a href="services.html" class="read-more-link text-decoration-none">Explore More
+                                            <i class="far fa-arrow-right ms-2"></i></a>
+                                    </div>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-xl-3">
-                        <div class="digi-service-single mb-4 mb-xl-0">
-                            <img src="assets/img/icons/d-2.svg" alt="icon" />
-                            <h3 class="h5">Content Marketing</h3>
-                            <p>
-                                Assertively negotiate adaptive human capital and collaboration and idea-sharing rather
-                                than extensive communities.
-                            </p>
-                            <a href="services.html" class="read-more-link text-decoration-none">Explore More <i
-                                    class="far fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-xl-3">
-                        <div class="digi-service-single mb-4 mb-xl-0">
-                            <img src="assets/img/icons/d-3.svg" alt="icon" />
-                            <h3 class="h5">Content Marketing</h3>
-                            <p>
-                                Globally promote long-term high-impact resources and goal-oriented growth strategies.
-                                Globally incubate
-                                extensible.
-                            </p>
-                            <a href="services.html" class="read-more-link text-decoration-none">Explore More <i
-                                    class="far fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-xl-3">
-                        <div class="digi-service-single mb-4 mb-xl-0">
-                            <img src="assets/img/icons/d-4.svg" alt="icon" />
-                            <h3 class="h5">Youtube Marketing</h3>
-                            <p>
-                                Globally utilize emerging networks through team driven models develop team driven
-                                systems through.
-                            </p>
-                            <a href="services.html" class="read-more-link text-decoration-none">Explore More <i
-                                    class="far fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
+
+                    <!-- Transparent Custom Left and Right Buttons -->
+                    <button id="customPrevBtn" class="carousel-control-prev-custom">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button id="customNextBtn" class="carousel-control-next-custom">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
         </section>
+
+
+
         <!-- Service End -->
 
         <!-- Newsletter Start -->
@@ -1274,11 +1437,14 @@
                             </div>
                             <h2>Why Working With Us?</h2>
                             <p>
-                                Compellingly orchestrate resource sucking leadership skills
-                                without collaborative technology. Holisticly pontificate resource
-                                maximizing imperatives after world-class Globally communicate
-                                effective schemas without low-risk materials. Interactively
-                                transition tactical fabricate corporate meta-services .
+                                At SYTE Consultants, we are driven by a singular vision: to be your trusted partner in
+                                navigating the complexities of RERA regulations. With a team of dedicated professionals
+                                who possess in-depth expertise in the real estate sector, we offer unparalleled guidance
+                                in ensuring that your projects are fully compliant with the latest RERA mandates. Our
+                                commitment to excellence means that we stay updated on every regulatory change, allowing
+                                us to provide you with accurate, timely, and efficient solutions tailored to your
+                                specific needs. When you choose SYTE Consultants, you choose peace of mind, knowing that
+                                your RERA compliance is in expert hands.
                             </p>
                             <div>
                                 <ul class="list-unstyled mb-0 mt-5">
@@ -1338,15 +1504,15 @@
                                 <img src="assets/img/arro-right.svg" class="img-fluid" alt="arrow" />
                             </div>
                             <h2>
-                                Our Bulletproof Prcess to win on
-                                <span class="text-orang">Social Media</span>
+                                Our Bulletproof Process for
+                                <span class="text-orang">RERA Compliance and Real Estate Solutions</span>
                             </h2>
                             <p>
-                                Compellingly orchestrate resource sucking leadership skills
-                                without collaborative technology. Holisticly pontificate resource
-                                maximizing imperatives after world-class Globally communicate
-                                effective schemas without low-risk materials. Interactively
-                                transition tactical fabricate corporate meta-services.
+                                SYTE Consultants was founded with a vision to become the go-to partner for all
+                                RERA-related matters. Our team comprises dedicated professionals with a deep
+                                understanding of the real estate landscape and a commitment to ensuring compliance with
+                                RERA regulations. With years of experience and a track record of success, we have
+                                established ourselves as a trusted resource in the industry.
                             </p>
                             <a href="request-demo.html" class="btn rounded-pill bg-orange mt-3">
                                 Request a Quoate
@@ -1364,10 +1530,12 @@
                                         </div>
                                         <div>
                                             <span class="text-orange fw-bold">Step 1</span>
-                                            <h6>Social Media Content Plan</h6>
+                                            <h6>Agent Registration</h6>
                                             <p class="m-0">
-                                                Compellingly orchestrate resource sucking leadership
-                                                skills without collaborative technology.
+                                                We provide tailored solutions for individual and non-individual agent
+                                                registrations, combining consultancy services when needed. We also
+                                                handle agent renewals to ensure you remain compliant with all
+                                                regulations.
                                             </p>
                                         </div>
                                     </li>
@@ -1378,10 +1546,12 @@
                                         </div>
                                         <div>
                                             <span class="text-orange fw-bold">Step 2</span>
-                                            <h6>Publishing & Execution</h6>
+                                            <h6>Project Registration</h6>
                                             <p class="m-0">
-                                                Compellingly orchestrate resource sucking leadership
-                                                skills without collaborative technology.
+                                                Our services cover project registration and quarterly progress reports,
+                                                ensuring full compliance with RERA. We offer customized RERA project
+                                                packages suited to your development needs.
+
                                             </p>
                                         </div>
                                     </li>
@@ -1392,11 +1562,11 @@
                                         </div>
                                         <div>
                                             <span class="text-orange fw-bold">Step 3</span>
-                                            <h6>Measure & Scale</h6>
+                                            <h6>Other Services and Consultancy</h6>
                                             <p class="m-0">
-                                                Compellingly orchestrate resource sucking leadership
-                                                skills without collaborative technology.
-                                            </p>
+                                                SYTE Consultants offers assistance with project extensions, quarterly
+                                                progress reports, and administrative updates like bank account or
+                                                project name changes, ensuring you stay compliant and risk-free. </p>
                                         </div>
                                     </li>
                                 </ul>
@@ -1546,14 +1716,14 @@
                     <div class="col-lg-6">
                         <div class="text-center">
                             <div>
-                                <span class="span-arrow text-pink">Intergration Software </span>
+                                <span class="span-arrow text-pink">Don't know what suits your business? </span>
                                 <img src="assets/img/arro-right.svg" alt="arrow" />
                             </div>
-                            <h2 class="mb-4">Intergrated with 20+ Widely Used Software</h2>
+                            <h2 class="mb-4">Get Free First Consultation now!</h2>
                             <div>
                                 <a href="contact-us.html" class="btn rounded-pill bg-orange me-3 mb-3">Get in touch</a>
-                                <a href="integrations.html" class="btn rounded-pill btn-outline-light mb-3">Browse all
-                                    integration</a>
+                                <a href="integrations.html" class="btn rounded-pill btn-outline-light mb-3">Explore more
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1724,14 +1894,15 @@
                                     <div class="bg-white contact-box mb-4 mb-md-0">
                                         <img src="assets/img/icons/c-i-1.svg" alt="icon" />
                                         <h4 class="h5">Email Address</h4>
-                                        <p class="fw-bold">themetags@support.com</p>
+                                        <p class="fw-bold">connectsyte@gmail.com<br>.</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="bg-white contact-box">
                                         <img src="assets/img/icons/c-i-2.svg" alt="icon" />
                                         <h4 class="h5">Phone</h4>
-                                        <p class="fw-bold">+80 1789 1456 456</p>
+                                        <p class="fw-bold">+91 84466 56437<br>
+                                            +91 91569 69459</p>
                                     </div>
                                 </li>
                             </ul>
@@ -1798,19 +1969,63 @@
         <footer class="footer-section">
             <!--footer top start-->
             <!--for light footer add .footer-light class and for dark footer add .bg-dark .text-white class-->
-            <div class="footer-top bg-dark text-white  ptb-120"
-                style="background: url('assets/img/page-header-bg.svg')no-repeat bottom right">
+            <div class="footer-top bg-dark text-white ptb-120"
+                style="background: url('assets/img/page-header-bg.svg') no-repeat bottom right">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-md-8 col-lg-4 mb-md-4 mb-lg-0">
+                        <!-- SYTE Consultants Info -->
+                        <div class="col-md-12 col-lg-4 mb-md-4 mb-lg-0">
                             <div class="footer-single-col">
                                 <div class="footer-single-col mb-4">
-                                    <img src="assets/img/logo-white.png" alt="logo" class="img-fluid logo-white">
-                                    <img src="assets/img/logo-color.png" alt="logo" class="img-fluid logo-color">
+                                    <img src="assets/img/companies/2.png" alt="logo" class="img-fluid logo-white">
+                                    <img src="assets/img/companies/2.png" alt="logo" class="img-fluid logo-color">
                                 </div>
-                                <p>Our latest news, articles, and resources, we will sent to
-                                    your inbox weekly.</p>
+                                <p>SYTE Consultants was founded with a vision to become the go-to partner for all
+                                    RERA-related matters. Our team comprises dedicated professionals with a deep
+                                    understanding.</p>
+                            </div>
+                        </div>
 
+                        <!-- Contact Info -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-single-col">
+                                <h3>Contact Info</h3>
+                                <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                    <li><a href="tel:+918446656437" class="text-decoration-none"><i
+                                                class="fas fa-phone-alt"></i> +91 84466 56437 <br> &nbsp;
+                                            &nbsp;&nbsp;&nbsp;+91 91569 69459</a></li>
+                                    <li><a href="mailto:connectsyte@gmail.com"
+                                            class="text-decoration-none d-flex align-items-center"><i
+                                                class="fas fa-envelope"></i>&nbsp;connectsyte@gmail.com</a></li>
+                                    <li><i class="fas fa-map-marker-alt"></i> Mumbai, Pune, Solapur, Nashik, Nagpur,
+                                        Amravati</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Our Services -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="footer-single-col">
+                                <h3>Our Services</h3>
+                                <ul class="list-unstyled footer-nav-list mb-lg-0">
+                                    <li><a href="project-registration.html" class="text-decoration-none">Project
+                                            Registration</a></li>
+                                    <li><a href="individual-agent-registration.html"
+                                            class="text-decoration-none">Individual Agent Registration</a></li>
+                                    <li><a href="project-registration-qpr.html" class="text-decoration-none">Project
+                                            Registration with Quarterly Progress Report</a></li>
+                                    <li><a href="project-extension.html" class="text-decoration-none">Project
+                                            Extension</a></li>
+                                    <li><a href="yearly-consultancy.html" class="text-decoration-none">Yearly
+                                            Consultancy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Subscribe Section (Image Removed) -->
+                        <div class="col-md-12 col-lg-4 mb-md-4 mb-lg-0">
+                            <div class="footer-single-col">
+                                <p>Our latest news, articles, and resources will be sent to your inbox weekly.</p>
                                 <form class="newsletter-form position-relative d-block d-lg-flex d-md-flex">
                                     <input type="text" class="input-newsletter form-control me-2"
                                         placeholder="Enter your email" name="email" required="" autocomplete="off">
@@ -1829,93 +2044,40 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-7 mt-4 mt-md-0 mt-lg-0">
-                            <div class="row">
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
-                                    <div class="footer-single-col">
-                                        <h3>Primary Pages</h3>
-                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                                            <li><a href="about-us.html" class="text-decoration-none">About Us</a></li>
-                                            <li><a href="services.html" class="text-decoration-none">Services</a></li>
-                                            <li><a href="career.html" class="text-decoration-none">Career</a></li>
-                                            <li><a href="integrations.html"
-                                                    class="text-decoration-none">Integrations</a>
-                                            </li>
-                                            <li><a href="integration-single.html"
-                                                    class="text-decoration-none">Integration Single</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
-                                    <div class="footer-single-col">
-                                        <h3>Pages</h3>
-                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
-                                            <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
-                                            <li><a href="blog-single.html" class="text-decoration-none">Blog Details</a>
-                                            </li>
-                                            <li><a href="contact-us.html" class="text-decoration-none">Contact</a></li>
-                                            <li><a href="career-single.html" class="text-decoration-none">Career
-                                                    Single</a>
-                                            </li>
-                                            <li><a href="service-single.html" class="text-decoration-none">Services
-                                                    Single</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
-                                    <div class="footer-single-col">
-                                        <h3>Template</h3>
-                                        <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="contact-us.html" class="text-decoration-none">Contact</a></li>
-                                            <li><a href="support.html" class="text-decoration-none">Support</a></li>
-                                            <li><a href="support-single.html" class="text-decoration-none">Support
-                                                    Single</a></li>
-                                            <li><a href="team.html" class="text-decoration-none">Our Team</a></li>
-                                            <li><a href="client-review.html" class="text-decoration-none">Customer
-                                                    Review</a></li>
-                                            <li><a href="career-single.html" class="text-decoration-none">Career
-                                                    Single</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
-            <!--footer top end-->
 
-            <!--footer bottom start-->
-            <div class="footer-bottom bg-dark text-white  py-4">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-md-7 col-lg-7">
-                            <div class="copyright-text">
-                                <p class="mb-lg-0 mb-md-0">&copy; 2021 Quiety Rights Reserved. Designed By <a
-                                        href="https://themetags.com/" class="text-decoration-none">ThemeTags</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <div class="footer-single-col text-start text-lg-end text-md-end">
-                                <ul class="list-unstyled list-inline footer-social-list mb-0">
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
+    </div>
+    <!--footer top end-->
+
+    <!--footer bottom start-->
+    <div class="footer-bottom bg-dark text-white  py-4">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-7 col-lg-7">
+                    <div class="copyright-text">
+                        <p class="mb-lg-0 mb-md-0">&copy; 2021 Quiety Rights Reserved. Designed By <a
+                                href="https://themetags.com/" class="text-decoration-none">ThemeTags</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="footer-single-col text-start text-lg-end text-md-end">
+                        <ul class="list-unstyled list-inline footer-social-list mb-0">
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!--footer bottom end-->
-        </footer>
-        <!--footer section end-->
-        <!--footer section end-->
+        </div>
+    </div>
+    <!--footer bottom end-->
+    </footer>
+    <!--footer section end-->
+    <!--footer section end-->
     </div>
 
 
@@ -1958,8 +2120,17 @@
             // Add active class to the clicked tab
             event.currentTarget.classList.add("active");
         }
+        document.getElementById('customPrevBtn').addEventListener('click', function () {
+            $('#servicesCarousel').carousel('prev');
+        });
 
+        document.getElementById('customNextBtn').addEventListener('click', function () {
+            $('#servicesCarousel').carousel('next');
+        });
     </script>
+    <!-- JavaScript for custom buttons -->
+
+
 </body>
 
 </html>
