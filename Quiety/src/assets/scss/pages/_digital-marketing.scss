@@ -1,14 +1,14 @@
 .text-orange {
-  color: #ff3951;
+  color:#046c6c;
 }
 .bg-orange {
-  background-color: #ff3951;
+  background-color: #61b4b4;
   color: #fff;
   border: 1px solid transparent;
   &:hover {
     background-color: transparent;
-    color: #ff3951;
-    border: 1px solid #ff3951;
+    color: #61b4b4;
+    border: 1px solid #61b4b4;
   }
 }
 
@@ -18,7 +18,7 @@
 .span-arrow {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #ff3951;
+  color: #61b4b4;
   font-weight: 600;
 }
 
@@ -102,7 +102,7 @@
       position: absolute;
       right: 0;
       top: 0;
-      background: #ff3951;
+      background: #61b4b4;
       border-radius: 0px 50px 50px 0px;
       padding: 14px 20px;
       font-size: 14px;
@@ -135,7 +135,7 @@
       &:first-child {
         width: 90px;
         height: 90px;
-        border: 15px solid #ff3951;
+        border: 15px solid #61b4b4;
         border-radius: 50%;
         left: -6%;
         position: absolute;
@@ -171,7 +171,7 @@
       background-color: #ffc226;
     }
     .d-tag.design {
-      background-color: #ff3951;
+      background-color: #61b4b4;
     }
   }
   .digi-blog-info {
@@ -193,7 +193,7 @@
       color: #14142b;
       font-weight: 600;
       &:hover {
-        color: #ff3951;
+        color: #61b4b4;
       }
     }
   }
@@ -333,7 +333,7 @@
     background-color: $white;
     color: $dark;
     &:hover {
-      background-color: #ff3951;
+      background-color: #61b4b4;
       color: $white;
     }
     &::after {
