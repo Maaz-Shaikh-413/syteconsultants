@@ -42,23 +42,145 @@
 
     <!--build:css-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- endbuild -->
 
     <!--custom css start-->
     <link rel="stylesheet" href="assets/css/custom.css">
     <!--custom css end-->
     <style>
-        .main-header {
-            position: sticky; /* Make the header sticky */
-            top: 0; /* Position it at the top */
-            z-index: 1000; /* Ensure it's above other content */
-            background-color: white; /* Set a background color */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
-        }
-        .section {
-            padding: 60px 0;
+        /* General Navbar Styles */
+        .navbar {
+            background-color: #f8f9fa;
+            /* Navbar background color */
+            padding: 0.5rem 1rem;
+            /* Reduced padding to save space */
+            position: fixed;
+            /* Make the navbar fixed */
+            top: 0;
+            /* Stick to the top of the viewport */
+            width: 100%;
+            /* Ensure it spans the full width */
+            z-index: 1000;
+            /* Ensure it stays above other elements */
         }
 
+        /* Add top padding to body to prevent content from hiding under navbar */
+        body {
+            padding-top: 80px;
+            /* Adjust this value based on your navbar height */
+        }
+
+        .nav-item .nav-link {
+            font-size: 1rem;
+            /* Adjust font size as needed */
+            font-weight: 500;
+            /* Slightly bolder font for readability */
+            padding: 18px 24px;
+            /* Increased padding for larger text */
+            color: #333;
+            /* Text color */
+            transition: color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .nav-item .nav-link:hover {
+            color: #046363;
+            /* Hover color */
+        }
+
+        /* Mega Menu Styles */
+        .mega-menu {
+            background-color: #fff;
+            /* Background color of the mega menu */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            /* Softer shadow */
+            display: none;
+            /* Initially hide mega menu */
+            min-width: 700px;
+            /* Set minimum width to fit content */
+            padding: 1.5rem;
+            /* Add padding inside the mega menu */
+            position: absolute;
+            /* Positioning */
+            z-index: 1000;
+            /* Ensure it appears above other elements */
+            border-radius: 8px;
+            /* Rounded corners */
+        }
+
+        .dropdown:hover .mega-menu {
+            display: block;
+            /* Show mega menu on hover */
+        }
+
+        /* Mega Menu Columns */
+        .mega-menu .row>div {
+            padding: 0 15px;
+            /* Add padding between columns */
+        }
+
+        .drop-heading {
+            color: #333;
+            /* Heading color */
+            font-size: 1.1rem;
+            /* Larger font for headings */
+            font-weight: bold;
+            /* Bold font */
+            margin-bottom: 12px;
+            /* Space below headings */
+        }
+
+        /* Dropdown Item Styles */
+        .dropdown-item {
+            color: #555;
+            /* Text color */
+            font-size: 0.95rem;
+            /* Adjust font size as needed */
+            padding: 10px 18px;
+            /* Increase padding for larger text */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .dropdown-item:hover {
+            background-color: #e9ecef;
+            /* Background color on hover */
+            color: #000;
+            /* Text color on hover */
+        }
+
+        /* Offcanvas Menu Styles */
+        .offcanvas-header {
+            border-bottom: 1px solid #ddd;
+            /* Border for offcanvas header */
+        }
+
+        .offcanvas-body .nav-link {
+            font-size: 1rem;
+            /* Adjust font size as needed */
+            font-weight: 500;
+            /* Slightly bolder font for readability */
+            padding: 10px 0;
+            /* Adjust padding */
+            color: #333;
+            /* Text color */
+            transition: color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .offcanvas-body .nav-link:hover {
+            color: #046363;
+            /* Hover color */
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+            /* Default padding for sections */
+        }
+
+        /* Adjustments for Content Sections */
         .content-section h2 {
             font-size: 28px;
             font-weight: 700;
@@ -73,7 +195,6 @@
         .icon-container {
             width: 40px;
             height: 40px;
-            background-color: #007bff;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -96,6 +217,7 @@
             color: #555;
         }
 
+        /* Sidebar Styles */
         .sidebar {
             background: #f9f9f9;
             padding: 20px;
@@ -108,24 +230,60 @@
             margin-bottom: 15px;
         }
 
-        .service-list {
+        .sidebar .service-list {
             list-style: none;
             padding: 0;
         }
 
-        .service-list li {
+        .sidebar .service-list li {
             font-size: 16px;
-            padding: 8px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            /* Light gray line */
             color: #333;
         }
 
+        .sidebar .service-list a {
+            color: #046363;
+            /* Green text color */
+            text-decoration: none;
+            /* No underline */
+        }
+
+        .sidebar .service-list a:hover {
+            color: #046363;
+        }
+
+        /* Ad Section Styles */
         .ad-section img {
             width: 100%;
             border-radius: 8px;
             margin-top: 15px;
         }
-    </style>
 
+        /* Responsive Adjustments */
+        @media (max-width: 767px) {
+            .mega-menu {
+                padding: 1rem;
+                /* Adjust padding for mobile view */
+                position: static;
+                /* Static positioning */
+                width: 100%;
+                /* Full width */
+            }
+
+            .section {
+                padding: 40px 0;
+                /* Reduced padding for mobile */
+            }
+
+            body {
+                padding-top: 60px;
+                /* Smaller padding for mobile view */
+            }
+        }
+    </style>
+        
 </head>
 
 <body>
@@ -310,7 +468,7 @@
                             <!-- Feature Item 1 -->
                             <div class="feature-item d-flex mb-4">
                                 <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/legal-requirement-icon.png" alt="Real Estate Companies Icon" width="24" height="24">
+                                    <i class="fas fa-home" style="color: white; font-size: 24px;"></i> <!-- Real Estate Companies Icon -->
                                 </div>
                                 <div class="feature-content">
                                     <h4>Real Estate Companies</h4>
@@ -321,7 +479,7 @@
                             <!-- Feature Item 2 -->
                             <div class="feature-item d-flex mb-4">
                                 <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/consumer-protection-icon.png" alt="Partnerships Icon" width="24" height="24">
+                                    <i class="fas fa-people-arrows" style="color: white; font-size: 24px;"></i> <!-- Partnerships Icon -->
                                 </div>
                                 <div class="feature-content">
                                     <h4>Partnerships</h4>
@@ -332,7 +490,7 @@
                             <!-- Feature Item 3 -->
                             <div class="feature-item d-flex mb-4">
                                 <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/enhanced-credibility-icon.png" alt="Joint Ventures Icon" width="24" height="24">
+                                    <i class="fas fa-users-cog" style="color: white; font-size: 24px;"></i> <!-- Joint Ventures Icon -->
                                 </div>
                                 <div class="feature-content">
                                     <h4>Joint Ventures</h4>
@@ -343,7 +501,7 @@
                             <!-- Feature Item 4 -->
                             <div class="feature-item d-flex mb-4">
                                 <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/access-information-icon.png" alt="Non-Profit Organizations Icon" width="24" height="24">
+                                    <i class="fas fa-hands-helping" style="color: white; font-size: 24px;"></i> <!-- Non-Profit Organizations Icon -->
                                 </div>
                                 <div class="feature-content">
                                     <h4>Non-Profit Organizations</h4>
@@ -354,7 +512,7 @@
                             <!-- Feature Item 5 -->
                             <div class="feature-item d-flex mb-4">
                                 <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/access-information-icon.png" alt="Limited Liability Partnerships Icon" width="24" height="24">
+                                    <i class="fas fa-user-tie" style="color: white; font-size: 24px;"></i> <!-- Limited Liability Partnerships Icon -->
                                 </div>
                                 <div class="feature-content">
                                     <h4>Limited Liability Partnerships</h4>
@@ -365,7 +523,7 @@
                             <!-- Feature Item 6 -->
                             <div class="feature-item d-flex mb-4">
                                 <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/access-information-icon.png" alt="Other Legal Structures Icon" width="24" height="24">
+                                    <i class="fas fa-balance-scale" style="color: white; font-size: 24px;"></i> <!-- Other Legal Structures Icon -->
                                 </div>
                                 <div class="feature-content">
                                     <h4>Other Legal Structures</h4>
@@ -375,7 +533,7 @@
         
                             <!-- WHY CHOOSE SYTE CONSULTANTS Section -->
                             <h2>WHY CHOOSE SYTE CONSULTANTS FOR OTHER THAN INDIVIDUAL REGISTRATION</h2>
-                            
+        
                             <div class="service-item">
                                 <h3>Expert Guidance</h3>
                                 <p>Our team consists of seasoned RERA consultants who possess in-depth knowledge of the real estate industry and RERA regulations.</p>
@@ -418,7 +576,7 @@
                                 <li><a href="Quarterly-Progress-Reports.html">Quarterly Progress Report</a></li>
                                 <li><a href="Rera-Project-Package.html">RERA Project Package</a></li>
                             </ul>
-                    
+        
                             <div class="ad-section mt-5">
                                 <img src="./promo.png" alt="RERA Registration Ad">
                                 <p>Starting at just ₹19,999/- only</p>
@@ -433,10 +591,11 @@
                             </div>
                         </div>
                     </div>
-                    
+        
                 </div>
             </div>
         </section>
+        
         
 
     <!-- Second Sidebar Section: Pricing and News -->
