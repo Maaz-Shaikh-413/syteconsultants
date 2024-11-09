@@ -51,8 +51,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Property Consultancy</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Rera Complaints</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Property-Consultancy.html">Property Consultancy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Rera-Complaints.html">Rera Complaints</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Rera Blogs</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Notification</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Company</a></li>

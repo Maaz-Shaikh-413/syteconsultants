@@ -48,10 +48,138 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <!--custom css end-->
     <style>
-        .section {
-            padding: 60px 0;
+        /* General Navbar Styles */
+        .navbar {
+            background-color: #f8f9fa;
+            /* Navbar background color */
+            padding: 0.5rem 1rem;
+            /* Reduced padding to save space */
+            position: fixed;
+            /* Make the navbar fixed */
+            top: 0;
+            /* Stick to the top of the viewport */
+            width: 100%;
+            /* Ensure it spans the full width */
+            z-index: 1000;
+            /* Ensure it stays above other elements */
         }
 
+        /* Add top padding to body to prevent content from hiding under navbar */
+        body {
+            padding-top: 80px;
+            /* Adjust this value based on your navbar height */
+        }
+
+        .nav-item .nav-link {
+            font-size: 1rem;
+            /* Adjust font size as needed */
+            font-weight: 500;
+            /* Slightly bolder font for readability */
+            padding: 18px 24px;
+            /* Increased padding for larger text */
+            color: #333;
+            /* Text color */
+            transition: color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .nav-item .nav-link:hover {
+            color: #046363;
+            /* Hover color */
+        }
+
+        /* Mega Menu Styles */
+        .mega-menu {
+            background-color: #fff;
+            /* Background color of the mega menu */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            /* Softer shadow */
+            display: none;
+            /* Initially hide mega menu */
+            min-width: 700px;
+            /* Set minimum width to fit content */
+            padding: 1.5rem;
+            /* Add padding inside the mega menu */
+            position: absolute;
+            /* Positioning */
+            z-index: 1000;
+            /* Ensure it appears above other elements */
+            border-radius: 8px;
+            /* Rounded corners */
+        }
+
+        .dropdown:hover .mega-menu {
+            display: block;
+            /* Show mega menu on hover */
+        }
+
+        /* Mega Menu Columns */
+        .mega-menu .row>div {
+            padding: 0 15px;
+            /* Add padding between columns */
+        }
+
+        .drop-heading {
+            color: #333;
+            /* Heading color */
+            font-size: 1.1rem;
+            /* Larger font for headings */
+            font-weight: bold;
+            /* Bold font */
+            margin-bottom: 12px;
+            /* Space below headings */
+        }
+
+        /* Dropdown Item Styles */
+        .dropdown-item {
+            color: #555;
+            /* Text color */
+            font-size: 0.95rem;
+            /* Adjust font size as needed */
+            padding: 10px 18px;
+            /* Increase padding for larger text */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .dropdown-item:hover {
+            background-color: #e9ecef;
+            /* Background color on hover */
+            color: #000;
+            /* Text color on hover */
+        }
+
+        /* Offcanvas Menu Styles */
+        .offcanvas-header {
+            border-bottom: 1px solid #ddd;
+            /* Border for offcanvas header */
+        }
+
+        .offcanvas-body .nav-link {
+            font-size: 1rem;
+            /* Adjust font size as needed */
+            font-weight: 500;
+            /* Slightly bolder font for readability */
+            padding: 10px 0;
+            /* Adjust padding */
+            color: #333;
+            /* Text color */
+            transition: color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .offcanvas-body .nav-link:hover {
+            color: #046363;
+            /* Hover color */
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+            /* Default padding for sections */
+        }
+
+        /* Adjustments for Content Sections */
         .content-section h2 {
             font-size: 28px;
             font-weight: 700;
@@ -66,7 +194,6 @@
         .icon-container {
             width: 40px;
             height: 40px;
-            background-color: #007bff;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -89,6 +216,7 @@
             color: #555;
         }
 
+        /* Sidebar Styles */
         .sidebar {
             background: #f9f9f9;
             padding: 20px;
@@ -101,21 +229,57 @@
             margin-bottom: 15px;
         }
 
-        .service-list {
+        .sidebar .service-list {
             list-style: none;
             padding: 0;
         }
 
-        .service-list li {
+        .sidebar .service-list li {
             font-size: 16px;
-            padding: 8px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            /* Light gray line */
             color: #333;
         }
 
+        .sidebar .service-list a {
+            color: #046363;
+            /* Green text color */
+            text-decoration: none;
+            /* No underline */
+        }
+
+        .sidebar .service-list a:hover {
+            color: #046363;
+        }
+
+        /* Ad Section Styles */
         .ad-section img {
             width: 100%;
             border-radius: 8px;
             margin-top: 15px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 767px) {
+            .mega-menu {
+                padding: 1rem;
+                /* Adjust padding for mobile view */
+                position: static;
+                /* Static positioning */
+                width: 100%;
+                /* Full width */
+            }
+
+            .section {
+                padding: 40px 0;
+                /* Reduced padding for mobile */
+            }
+
+            body {
+                padding-top: 60px;
+                /* Smaller padding for mobile view */
+            }
         }
     </style>
 
@@ -204,8 +368,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Property Consultancy</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Rera Complaints</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Property-Consultancy.html">Property Consultancy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Rera-Complaints.html">Rera Complaints</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Rera Blogs</a></li>
                             <li class="nav-item"><a class="nav-link" href="Notifications.html">Notification</a></li>
                             <li class="nav-item"><a class="nav-link" href="about-us.html">Company</a></li>
@@ -307,7 +471,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12">
                         <div class="text-center">
-                            <h1 class="display-5 fw-bold">Support</h1>
+                            <h1 class="display-5 fw-bold">Property Consultancy</h1>
                             <p class="lead">Seamlessly actualize client-based users after out-of-the-box value. Globally
                                 embrace strategic high-quality platforms before frictionless expertise.</p>
 
@@ -336,102 +500,116 @@
                     <!-- Main Content Area (Left Column) -->
                     <div class="col-lg-8 col-md-8">
                         <div class="content-section">
-                            <h2>WHY AGENT REGISTRATION MATTERS</h2>
-
+                            <P>At SYTE Consultants, we are your dedicated partners in navigating the complex landscape of real estate. Our expert team is committed to providing you with top-tier services in the ever-evolving world of property consultancy. Whether you’re a homebuyer, seller, developer, or investor, we have the knowledge and expertise to guide you through every step of your real estate journey.</P>
+                            <h2>What Sets Us Apart</h2>
+        
                             <!-- Feature Item 1 -->
                             <div class="feature-item d-flex mb-4">
-                                <div class="icon-container me-3"
-                                    style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/legal-requirement-icon.png" alt="Legal Requirement Icon"
-                                        width="24" height="24">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-balance-scale" style="color: #fff; font-size: 24px;"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Legal Requirement</h4>
-                                    <p>RERA mandates that all real estate agents must be registered to operate legally.
-                                        Non-compliance can result in severe penalties.</p>
+                                    <h4>RERA Compliance Experts</h4>
+                                    <p>Our core strength lies in our profound understanding of the Real Estate Regulatory Authority (RERA) guidelines. We specialize in ensuring that all your real estate transactions are in full compliance with these regulations, offering you peace of mind and legal protection.</p>
                                 </div>
                             </div>
-
+        
                             <!-- Feature Item 2 -->
                             <div class="feature-item d-flex mb-4">
-                                <div class="icon-container me-3"
-                                    style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/consumer-protection-icon.png" alt="Consumer Protection Icon"
-                                        width="24" height="24">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-cogs" style="color: #fff; font-size: 24px;"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Consumer Protection</h4>
-                                    <p>Agent registration under RERA is aimed at safeguarding the interests of
-                                        homebuyers and sellers. It ensures transparency and accountability in real
-                                        estate transactions.</p>
+                                    <h4>Tailored Solutions</h4>
+                                    <p>We understand that every client is unique and has specific needs. Our consultative approach allows us to tailor our services to your exact requirements, ensuring the best possible outcome for your real estate endeavors.</p>
                                 </div>
                             </div>
-
+        
                             <!-- Feature Item 3 -->
                             <div class="feature-item d-flex mb-4">
-                                <div class="icon-container me-3"
-                                    style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/enhanced-credibility-icon.png" alt="Enhanced Credibility Icon"
-                                        width="24" height="24">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-chart-line" style="color: #fff; font-size: 24px;"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Enhanced Credibility</h4>
-                                    <p>RERA registration enhances your credibility as a real estate professional,
-                                        instilling confidence in clients and business partners.</p>
+                                    <h4>Market Insights</h4>
+                                    <p>Our team of industry experts continuously monitors market trends and dynamics. We leverage this knowledge to offer strategic advice that helps you make informed decisions about buying, selling, investing, or developing properties.</p>
                                 </div>
                             </div>
-
-                            <!-- Feature Item 4 -->
+        
+                            <h2>Our Services</h2>
+        
+                            <!-- Service Item 1 -->
                             <div class="feature-item d-flex mb-4">
-                                <div class="icon-container me-3"
-                                    style="background-color: #046363; padding: 10px; border-radius: 50%;">
-                                    <img src="path/to/access-information-icon.png" alt="Access to Information Icon"
-                                        width="24" height="24">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-gavel" style="color: #fff; font-size: 24px;"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Access to Information</h4>
-                                    <p>Registered agents gain access to a wealth of information and data about
-                                        registered real estate projects, which can be valuable for business growth.</p>
+                                    <h4>RERA Compliance Services</h4>
+                                    <p>We provide comprehensive services to ensure your real estate transactions adhere to RERA guidelines, offering legal protection and transparency in all your dealings.</p>
+                                </div>
+                            </div>
+        
+                            <!-- Service Item 2 -->
+                            <div class="feature-item d-flex mb-4">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-money-bill-wave" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Property Valuation</h4>
+                                    <p>Our expert appraisers can accurately determine the market value of your property, helping you set a competitive price or make informed investment decisions.</p>
+                                </div>
+                            </div>
+        
+                            <!-- Service Item 3 -->
+                            <div class="feature-item d-flex mb-4">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-lightbulb" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Investment Consultation</h4>
+                                    <p>Looking to invest in real estate? We provide in-depth insights and analysis to guide your investment choices and maximize your returns.</p>
+                                </div>
+                            </div>
+        
+                            <!-- Additional Service Items -->
+                            <div class="feature-item d-flex mb-4">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-user-tie" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Buyer and Seller Representation</h4>
+                                    <p>Whether you're buying or selling a property, our team will advocate for your best interests, negotiate on your behalf, and ensure a smooth transaction process.</p>
+                                </div>
+                            </div>
+        
+                            <div class="feature-item d-flex mb-4">
+                                <div class="icon-container me-3" style="background-color: #046363; padding: 10px; border-radius: 50%;">
+                                    <i class="fa fa-building" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Project Development Guidance</h4>
+                                    <p>Developers can rely on us for expert advice on project development, from regulatory compliance to market analysis, ensuring their projects meet both industry standards and market demands.</p>
                                 </div>
                             </div>
                         </div>
-
-                        <h2>OUR AGENT REGISTRATION SERVICES</h2>
-
-                        <!-- Services Section -->
-                        <div class="service-item">
-                            <h3>Application Assistance</h3>
-                            <p>We guide you through the entire registration process, helping you complete the necessary
-                                paperwork and documentation.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Compliance Evaluation</h3>
-                            <p>We review your business practices to ensure they align with RERA regulations, making any
-                                necessary adjustments for compliance.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Documentation Support</h3>
-                            <p>Our experts assist in preparing and organizing the required documents, making the
-                                registration process smoother.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Ongoing Compliance</h3>
-                            <p>We help you stay compliant with RERA requirements over time, ensuring your business
-                                continues to operate legally and ethically.</p>
-                        </div>
+        
+                        <h2>Why Choose SYTE Consultants?</h2>
+                        <ul>
+                            <li>Unparalleled expertise in RERA compliance.</li>
+                            <li>Tailored solutions to meet your unique needs.</li>
+                            <li>A dedicated team of industry experts.</li>
+                            <li>Proven track record of successful real estate transactions.</li>
+                            <li>Commitment to transparency, integrity, and client satisfaction.</li>
+                        </ul>
                     </div>
-
+        
                     <!-- Sidebar (Right Column) -->
                     <div class="col-lg-4 col-md-4">
                         <div class="sidebar">
                             <h4>Our Services</h4>
                             <ul class="service-list">
                                 <li><a href="Individual-Registration.html">Individual Registration</a></li>
-                                <li><a href="Non-Individual-Registration.html">Non-Individual/Other Registration</a>
-                                </li>
+                                <li><a href="Non-Individual-Registration.html">Non-Individual/Other Registration</a></li>
                                 <li><a href="Agent-Renewal.html">Agent Renewal</a></li>
                                 <li><a href="Change-In-Project-Name.html">Change in Project Name</a></li>
                                 <li><a href="Changes-In-Bank-Account.html">Changes in Bank Account</a></li>
@@ -442,7 +620,7 @@
                                 <li><a href="Rera-Project-Package.html">RERA Project Package</a></li>
                             </ul>
                         </div>
-
+        
                         <div class="ad-section mt-5">
                             <img src="./promo.png" alt="RERA Registration Ad">
                             <p>Starting at just ₹19,999/- only</p>
@@ -458,8 +636,9 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
+        </section>
+        
+        
 
 
     <!-- Second Sidebar Section: Pricing and News -->
