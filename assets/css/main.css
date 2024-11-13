@@ -50946,6 +50946,9 @@ li.setup-process-item:not(:last-child):before {
   color: #0c4c44 !important;
 }
 
+.text-white {
+  color: white !important;
+}
 .bg-pink {
   color: #fff;
   background-color: #0c4c44;
