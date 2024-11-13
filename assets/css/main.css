@@ -50430,6 +50430,12 @@ li.setup-process-item:not(:last-child):before {
 .text-orange {
   color: #0c4c44;
 }
+.digi-news-image {
+    background-image: url('assets/img/your-image.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .bg-orange {
   background-color: #0c4c44;
@@ -51513,6 +51519,23 @@ li.setup-process-item:not(:last-child):before {
           box-shadow: 0px 20px 80px -10px rgba(0, 108, 236, 0.15);
   border: 1px solid transparent;
 }
+.digi-news-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Optional padding around the image */
+}
+
+.rounded-image {
+  width: 100%;
+  max-width: 1116px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px; /* Adjust for rounding */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+
 
 /*# sourceMappingURL=scss */
 /*# sourceMappingURL=main.css.map */
