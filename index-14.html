@@ -221,52 +221,52 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-     /* Prevent horizontal scrolling on mobile */
-body, html {
+     /* Apply to all elements to prevent overflow */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    max-width: 100%; /* Ensure no element exceeds viewport width */
     overflow-x: hidden;
-    width: 100%;
     margin: 0;
     padding: 0;
 }
 
-@media (max-width: 576px) {
-    /* Set all containers to fit within the viewport */
-    .container, .content, .section, .form-wrapper, .social-links {
-        max-width: 100%;
-        padding: 0 10px; /* Use padding instead of margin to prevent overflow */
-        box-sizing: border-box; /* Ensures padding doesn't add to width */
-    }
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling on the main document */
+    width: 100%;
+}
 
-    /* Make sure no element exceeds 100% of the width */
-    .right-image, .text-content, .services-section {
+@media (max-width: 576px) {
+    /* Set all main containers to be within the viewport */
+    .container, .content, .section, .form-wrapper, .social-links, .footer, .footer-links, .services-section {
+        max-width: 100%;
         width: 100%;
-        overflow: hidden;
+        padding: 0 10px; /* Prevents container overflow */
+        box-sizing: border-box;
     }
 
     .right-image img {
-        max-width: 100%; /* Keep images responsive within their container */
+        max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto;
     }
 
-    /* Ensure form fields and buttons do not cause overflow */
     .form-wrapper input[type="email"],
     .form-wrapper button {
         width: 100%;
         margin: 5px 0;
     }
 
-    /* Adjust footer content */
-    .footer, .footer-links, .social-links {
+    .footer, .social-links {
         text-align: center;
         padding: 10px 0;
     }
+}
 
-    .footer-links a, .social-links a {
-        margin: 0 5px;
-        font-size: 14px;
-    }
+/* Debugging Overflow - TEMPORARY */
+* {
+    border: 1px solid red; /* Add red border to identify overflowing elements */
 }
 
         .counters-section .counter-box {
