@@ -221,53 +221,36 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-     /* Apply to all elements to prevent overflow */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    max-width: 100%; /* Ensure no element exceeds viewport width */
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
+        .content-image-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            /* Adjust the gap between content and image */
+        }
 
-body, html {
-    overflow-x: hidden; /* Prevent horizontal scrolling on the main document */
-    width: 100%;
-}
+        a {
+            color: orange;
+        }
 
-@media (max-width: 576px) {
-    /* Set all main containers to be within the viewport */
-    .container, .content, .section, .form-wrapper, .social-links, .footer, .footer-links, .services-section {
-        max-width: 100%;
-        width: 100%;
-        padding: 0 10px; /* Prevents container overflow */
-        box-sizing: border-box;
-    }
+        .tab-content {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+        }
 
-    .right-image img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
+        .right-image {
+            flex: 0 0 350px;
+            /* Set the width of the image container */
+        }
 
-    .form-wrapper input[type="email"],
-    .form-wrapper button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .footer, .social-links {
-        text-align: center;
-        padding: 10px 0;
-    }
-}
-
-/* Debugging Overflow - TEMPORARY */
-* {
-    border: 1px solid red; /* Add red border to identify overflowing elements */
-}
+        .right-image img {
+            max-width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
         .counters-section .counter-box {
             background-color: #f5f9ff;
