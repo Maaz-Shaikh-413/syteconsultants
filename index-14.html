@@ -221,83 +221,46 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-     /* General styles */
-.content-image-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px; /* Adjust the gap between content and image */
-    padding: 20px;
-}
-
-a {
-    color: orange;
-}
-
-.tab-content {
-    flex: 1;
-    text-align: left;
-    padding-right: 20px;
-}
-
-.right-image {
-    flex: 0 0 350px; /* Set the width of the image container */
-}
-
-.right-image img {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive adjustments for tablets and small desktops */
-@media (max-width: 991px) {
-    .content-image-wrapper {
-        flex-direction: column; /* Stack content and image vertically */
-        align-items: center;
-        gap: 20px;
-    }
-
-    .tab-content {
-        padding-right: 0; /* Remove extra padding on smaller screens */
-    }
-
-    .right-image {
-        width: 100%; /* Allow image to take full width on mobile */
-        max-width: 100%; /* Ensure it doesn't exceed screen width */
-    }
-}
-
-/* Mobile-specific adjustments */
+     /* General mobile adjustments */
 @media (max-width: 576px) {
-    .nav-tabs {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    body {
+        margin: 0;
+        padding: 0;
     }
 
-    .tab {
-        margin: 5px 0; /* Add margin between tabs on smaller screens */
+    .container, .content, .section, .form-wrapper, .social-links {
+        max-width: 100%; /* Allow sections to use full screen width */
+        padding: 0 15px; /* Add slight padding for spacing */
     }
 
-    .section-heading {
-        font-size: 24px; /* Adjust heading size for smaller screens */
+    /* Adjust content and spacing */
+    .right-image, .text-content, .services-section {
+        width: 100%;
         text-align: center;
     }
 
-    .tab-content {
-        text-align: center; /* Center-align content for a better mobile layout */
-        font-size: 16px; /* Adjust font size for readability */
+    .right-image img {
+        max-width: 90%; /* Ensure image is responsive within container */
+        height: auto;
+        margin: 0 auto; /* Center image horizontally */
     }
 
-    .right-image {
-        width: 100%; /* Make image full width */
-        max-width: 80%; /* Slightly smaller for more padding around it */
+    /* Form styling adjustments */
+    .form-wrapper input[type="email"],
+    .form-wrapper button {
+        width: 100%;
+        margin-top: 10px;
     }
 
-    .tabs-section {
-        padding: 20px; /* Add padding around the whole section */
+    /* Footer adjustments */
+    .footer, .footer-links, .social-links {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer-links a, .social-links a {
+        margin: 5px;
+        font-size: 14px;
     }
 }
 
