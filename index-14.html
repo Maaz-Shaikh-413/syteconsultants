@@ -51,6 +51,32 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <!--custom css end-->
     <style>
+        .bg-circle {
+            width: 100px;
+            height: 100px;
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        .circle-shape-1 {
+            top: 20px; /* Adjust as needed */
+            right: 20px;
+        }
+        
+        .circle-shape-3 {
+            bottom: 20px; /* Adjust as needed */
+            left: 20px;
+        }
+        
+        .bg-dark-light {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .bg-warning {
+            background-color: #ffc107;
+        }
+
+        
         /* General Navbar Styles */
         .navbar {
             background-color: #f8f9fa;
@@ -1131,7 +1157,7 @@
 
         <!-- Integration Start -->
         <section class="digi-integration bg-dark position-relative"
-            style="background: url('assets/img/footer-2\ copy.png')no-repeat center bottom">
+            style="background: url('assets/img/page-header-bg.svg')no-repeat center bottom">
             <div class="digi-testimonial">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -1512,8 +1538,9 @@
         <footer class="footer-section">
             <!--footer top start-->
             <!--for light footer add .footer-light class and for dark footer add .bg-dark .text-white class-->
-            <div class="footer-top bg-dark text-white ptb-120"
-                style="background: url('assets/img/footer-2\ copy.png') no-repeat bottom right">
+            <div class="footer-top bg-dark text-white ptb-120 position-relative">
+                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
+                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
                 <div class="container">
                     <div class="row justify-content-between">
                         <!-- SYTE Consultants Info -->
