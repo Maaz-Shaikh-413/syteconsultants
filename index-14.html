@@ -221,36 +221,75 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .content-image-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-            /* Adjust the gap between content and image */
-        }
+     /* General styles */
+.content-image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Adjust the gap between content and image */
+}
 
-        a {
-            color: orange;
-        }
+a {
+    color: orange;
+}
 
-        .tab-content {
-            flex: 1;
-            text-align: left;
-            padding-right: 20px;
-        }
+.tab-content {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
 
-        .right-image {
-            flex: 0 0 350px;
-            /* Set the width of the image container */
-        }
+.right-image {
+    flex: 0 0 350px; /* Set the width of the image container */
+}
 
-        .right-image img {
-            max-width: 100%;
-            height: auto;
-            /* Maintain aspect ratio */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.right-image img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .content-image-wrapper {
+        flex-direction: column; /* Stack content and image vertically */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tab-content {
+        padding-right: 0; /* Remove extra padding on smaller screens */
+        text-align: center; /* Center-align text for a better mobile layout */
+    }
+
+    .right-image {
+        width: 100%; /* Allow image to take full width on mobile */
+        max-width: 100%; /* Ensure it doesn't exceed screen width */
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        margin: 5px 0; /* Add margin between tabs on smaller screens */
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+        text-align: center;
+    }
+
+    .right-image {
+        width: 80%; /* Make image a bit smaller for very small screens */
+    }
+}
 
         .counters-section .counter-box {
             background-color: #f5f9ff;
