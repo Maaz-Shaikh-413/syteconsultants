@@ -272,17 +272,44 @@ body, html {
     }
 
     /* Full width for key sections */
-    .right-image, .text-content, .services-section {
+   .text-content, .services-section {
         width: 100%;
         overflow: hidden;
+    }
+
+    .content-image-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        /* Adjust the gap between content and image */
+    }
+
+
+   
+    .right-image {
+        flex: 0 0 350px;
+        /* Set the width of the image container */
     }
 
     .right-image img {
         max-width: 100%;
         height: auto;
-        display: block;
-        margin: 0 auto;
+        /* Maintain aspect ratio */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
+
+
+
+
+
+
+
+
+
+
 
     /* Form adjustments */
     .form-wrapper input[type="email"],
