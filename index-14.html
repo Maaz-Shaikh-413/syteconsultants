@@ -221,7 +221,7 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-     /* Prevent horizontal scrolling on mobile */
+  /* Prevent horizontal scrolling on mobile */
 body, html {
     overflow-x: hidden;
     width: 100%;
@@ -229,35 +229,69 @@ body, html {
     padding: 0;
 }
 
+/* Navbar-specific styling */
+.navbar {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px; /* Adjust padding if needed */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Align items within the navbar */
+    align-items: center;
+    background-color: #fff; /* Customize as needed */
+    position: relative;
+    z-index: 10; /* Ensure navbar stays on top */
+}
+
+/* Navbar item styling */
+.navbar .logo {
+    max-width: 100px; /* Adjust size as needed */
+    flex-shrink: 0; /* Prevents logo from resizing */
+}
+
+.navbar .menu-items {
+    display: flex;
+    gap: 10px; /* Space between menu items */
+    flex-wrap: nowrap; /* Prevents items from wrapping */
+}
+
+.navbar .menu-items a {
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+/* Mobile-specific adjustments */
 @media (max-width: 576px) {
-    /* Set all containers to fit within the viewport */
+    /* General container styling */
     .container, .content, .section, .form-wrapper, .social-links {
         max-width: 100%;
-        padding: 0 10px; /* Use padding instead of margin to prevent overflow */
-        box-sizing: border-box; /* Ensures padding doesn't add to width */
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
-    /* Make sure no element exceeds 100% of the width */
+    /* Full width for key sections */
     .right-image, .text-content, .services-section {
         width: 100%;
         overflow: hidden;
     }
 
     .right-image img {
-        max-width: 100%; /* Keep images responsive within their container */
+        max-width: 100%;
         height: auto;
         display: block;
         margin: 0 auto;
     }
 
-    /* Ensure form fields and buttons do not cause overflow */
+    /* Form adjustments */
     .form-wrapper input[type="email"],
     .form-wrapper button {
         width: 100%;
         margin: 5px 0;
     }
 
-    /* Adjust footer content */
+    /* Footer adjustments */
     .footer, .footer-links, .social-links {
         text-align: center;
         padding: 10px 0;
@@ -267,7 +301,23 @@ body, html {
         margin: 0 5px;
         font-size: 14px;
     }
+
+    /* Navbar mobile adjustments */
+    .navbar {
+        padding: 10px; /* Ensure padding is set specifically for mobile */
+    }
+
+    .navbar .menu-items {
+        flex-direction: column; /* Stack items vertically on mobile */
+        gap: 5px; /* Adjust space between items */
+    }
+
+    .navbar .menu-items a {
+        font-size: 14px;
+        padding: 10px; /* Adjust padding for readability */
+    }
 }
+
 
         .counters-section .counter-box {
             background-color: #f5f9ff;
@@ -1572,7 +1622,7 @@ body, html {
                                     understanding.</p>
                             </div>
                         </div>
-
+                        <br><br><br>
                         <!-- Contact Info -->
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-single-col">
