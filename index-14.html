@@ -221,36 +221,53 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .content-image-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-            /* Adjust the gap between content and image */
-        }
+     /* Prevent horizontal scrolling on mobile */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-        a {
-            color: orange;
-        }
+@media (max-width: 576px) {
+    /* Set all containers to fit within the viewport */
+    .container, .content, .section, .form-wrapper, .social-links {
+        max-width: 100%;
+        padding: 0 10px; /* Use padding instead of margin to prevent overflow */
+        box-sizing: border-box; /* Ensures padding doesn't add to width */
+    }
 
-        .tab-content {
-            flex: 1;
-            text-align: left;
-            padding-right: 20px;
-        }
+    /* Make sure no element exceeds 100% of the width */
+    .right-image, .text-content, .services-section {
+        width: 100%;
+        overflow: hidden;
+    }
 
-        .right-image {
-            flex: 0 0 350px;
-            /* Set the width of the image container */
-        }
+    .right-image img {
+        max-width: 100%; /* Keep images responsive within their container */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 
-        .right-image img {
-            max-width: 100%;
-            height: auto;
-            /* Maintain aspect ratio */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* Ensure form fields and buttons do not cause overflow */
+    .form-wrapper input[type="email"],
+    .form-wrapper button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Adjust footer content */
+    .footer, .footer-links, .social-links {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer-links a, .social-links a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
 
         .counters-section .counter-box {
             background-color: #f5f9ff;
