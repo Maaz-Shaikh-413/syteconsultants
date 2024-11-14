@@ -227,6 +227,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px; /* Adjust the gap between content and image */
+    padding: 20px;
 }
 
 a {
@@ -250,7 +251,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tablets and small desktops */
 @media (max-width: 991px) {
     .content-image-wrapper {
         flex-direction: column; /* Stack content and image vertically */
@@ -260,7 +261,6 @@ a {
 
     .tab-content {
         padding-right: 0; /* Remove extra padding on smaller screens */
-        text-align: center; /* Center-align text for a better mobile layout */
     }
 
     .right-image {
@@ -269,6 +269,7 @@ a {
     }
 }
 
+/* Mobile-specific adjustments */
 @media (max-width: 576px) {
     .nav-tabs {
         display: flex;
@@ -278,7 +279,6 @@ a {
 
     .tab {
         margin: 5px 0; /* Add margin between tabs on smaller screens */
-        text-align: center;
     }
 
     .section-heading {
@@ -286,10 +286,18 @@ a {
         text-align: center;
     }
 
-    .right-image {
-        width: 80%; /* Make image a bit smaller for very small screens */
+    .tab-content {
+        text-align: center; /* Center-align content for a better mobile layout */
+        font-size: 16px; /* Adjust font size for readability */
     }
-}
+
+    .right-image {
+        width: 100%; /* Make image full width */
+        max-width: 80%; /* Slightly smaller for more padding around it */
+    }
+
+    .tabs-section {
+        paddin
 
         .counters-section .counter-box {
             background-color: #f5f9ff;
