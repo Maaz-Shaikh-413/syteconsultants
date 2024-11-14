@@ -279,27 +279,47 @@ body, html {
 
     .content-image-wrapper {
         display: flex;
+        flex-wrap: wrap; /* Allow content to wrap on smaller screens */
         justify-content: space-between;
         align-items: flex-start;
         gap: 30px;
         /* Adjust the gap between content and image */
     }
 
-
-   
-    .right-image {
-        flex: 0 0 350px;
-        /* Set the width of the image container */
+    /* Content area styling */
+    .left-content {
+        flex: 1;
+        /* This makes the content area flexible */
     }
 
-    .right-image img {
+    /* Image container styling */
+    .right-image {
+        flex-basis: 350px;
         max-width: 100%;
+        /* Allows the image container to shrink on smaller screens */
+    }
+
+    /* Image styling */
+    .right-image img {
+        width: 100%;
         height: auto;
         /* Maintain aspect ratio */
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .right-image {
+            flex-basis: 100%;
+            /* Set the image container to full width on small screens */
+        }
+
+        .content-image-wrapper {
+            flex-direction: column;
+            /* Stack content and image vertically */
+        }
+    }
 
 
 
