@@ -82,6 +82,8 @@
             background-color: #f8f9fa;
             /* Navbar background color */
             padding: 1rem 2rem;
+            position: relative;
+    z-index: 1000;
             /* Add padding to navbar */
         }
 
@@ -221,7 +223,7 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-  /* Prevent horizontal scrolling on mobile */
+     /* Prevent horizontal scrolling on mobile */
 body, html {
     overflow-x: hidden;
     width: 100%;
@@ -229,116 +231,43 @@ body, html {
     padding: 0;
 }
 
-/* Navbar-specific styling */
-.navbar {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px; /* Adjust padding if needed */
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between; /* Align items within the navbar */
-    align-items: center;
-    background-color: #fff; /* Customize as needed */
-    position: relative;
-    z-index: 10; /* Ensure navbar stays on top */
-}
-
-/* Navbar item styling */
-.navbar .logo {
-    max-width: 100px; /* Adjust size as needed */
-    flex-shrink: 0; /* Prevents logo from resizing */
-}
-
-.navbar .menu-items {
-    display: flex;
-    gap: 10px; /* Space between menu items */
-    flex-wrap: nowrap; /* Prevents items from wrapping */
-}
-
-.navbar .menu-items a {
-    padding: 8px 12px;
-    text-decoration: none;
-    font-size: 16px;
-    white-space: nowrap; /* Prevents text from breaking */
-}
-
-/* Mobile-specific adjustments */
 @media (max-width: 576px) {
-    /* General container styling */
+    /* Set all containers to fit within the viewport */
     .container, .content, .section, .form-wrapper, .social-links {
         max-width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
+        padding: 0 10px; /* Use padding instead of margin to prevent overflow */
+        box-sizing: border-box; /* Ensures padding doesn't add to width */
     }
 
-    /* Full width for key sections */
-   .text-content, .services-section {
+    /* Make sure no element exceeds 100% of the width */
+    .right-image, .text-content, .services-section {
         width: 100%;
         overflow: hidden;
     }
 
-    .content-image-wrapper {
-        display: flex;
-        flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 30px;
-        /* Adjust the gap between content and image */
-    }
-
-    /* Content area styling */
-    .left-content {
-        flex: 1;
-        /* This makes the content area flexible */
-    }
-
-    /* Image container styling */
     .right-image {
-        flex-basis: 350px;
-        max-width: 100%;
-        /* Allows the image container to shrink on smaller screens */
+        float: right; /* Aligns the element to the right */
+        margin-left: 20px; /* Adds some space between the right image and other content */
+        max-width: 50%; /* Ensures it doesn't take up too much space */
+        box-sizing: border-box; /* Prevents padding from affecting the total width */
     }
-
-    /* Image styling */
-    .right-image img {
-        width: 100%;
-        height: auto;
-        /* Maintain aspect ratio */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 768px) {
+    
+    @media (max-width: 576px) {
         .right-image {
-            flex-basis: 100%;
-            /* Set the image container to full width on small screens */
-        }
-
-        .content-image-wrapper {
-            flex-direction: column;
-            /* Stack content and image vertically */
+            float: none; /* Resets the alignment on small screens */
+            max-width: 100%; /* Makes it full-width on mobile */
+            margin: 0 auto; /* Centers the image on small screens */
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-    /* Form adjustments */
+    /* Ensure form fields and buttons do not cause overflow */
     .form-wrapper input[type="email"],
     .form-wrapper button {
         width: 100%;
         margin: 5px 0;
     }
 
-    /* Footer adjustments */
+    /* Adjust footer content */
     .footer, .footer-links, .social-links {
         text-align: center;
         padding: 10px 0;
@@ -348,26 +277,10 @@ body, html {
         margin: 0 5px;
         font-size: 14px;
     }
-
-    /* Navbar mobile adjustments */
-    .navbar {
-        padding: 10px; /* Ensure padding is set specifically for mobile */
-    }
-
-    .navbar .menu-items {
-        flex-direction: column; /* Stack items vertically on mobile */
-        gap: 5px; /* Adjust space between items */
-    }
-
-    .navbar .menu-items a {
-        font-size: 14px;
-        padding: 10px; /* Adjust padding for readability */
-    }
 }
 
-
         .counters-section .counter-box {
-            background-color: #f5f9ff;
+            background-color: #5caaab;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -656,7 +569,7 @@ body, html {
                                 Starting at just ₹ 19,000
                             </p>
                             <div class="action-btns mt-4 align-items-center d-block d-sm-flex d-lg-flex d-md-flex">
-                                <a href="contact-us.html" class="btn rounded-pill bg-orange me-3">Learn More</a>
+                                <a href="about-us.html" class="btn rounded-pill bg-orange me-3">Learn More</a>
 
                             </div>
                         </div>
@@ -698,30 +611,15 @@ body, html {
                         <div class="col-auto">
                             <div class="swiper digi-logo-slider">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/companies/1.png" class="img-fluid" height="30"
-                                                alt="logo" />
-                                        </div>
-                                    </div>
+                                   
                                     <div class="swiper-slide">
                                         <div class="single-logo">
                                             <img src="assets/img/companies/1-2.png" class="img-fluid" height="30"
                                                 alt="logo" />
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/companies/2.png" class="img-fluid" height="30"
-                                                alt="logo" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="single-logo">
-                                            <img src="assets/img/companies/2-1.png" class="img-fluid" height="30"
-                                                alt="logo" />
-                                        </div>
-                                    </div>
+                                 
+                                  
                                     <div class="swiper-slide">
                                         <div class="single-logo">
                                             <img src="assets/img/companies/3-1.png" class="img-fluid" height="30"
@@ -1136,7 +1034,7 @@ body, html {
                                             <img src="assets/img/icons/dw-i-1.svg" alt="icon" />
                                         </div>
                                         <div>
-                                            <h4 class="mb-0">250+</h4>
+                                            <h4 class="mb-0">550+</h4>
                                             <span>Happy Customer</span>
                                         </div>
                                     </li>
@@ -1145,7 +1043,7 @@ body, html {
                                             <img src="assets/img/icons/dw-i-2.svg" class="img-fluid" alt="icon" />
                                         </div>
                                         <div>
-                                            <h4 class="mb-0">540+</h4>
+                                            <h4 class="mb-0">12,000+</h4>
                                             <span>Succesfull Project</span>
                                         </div>
                                     </li>
@@ -1154,7 +1052,7 @@ body, html {
                                             <img src="assets/img/icons/dw-i-3.svg" class="img-fluid" alt="icon" />
                                         </div>
                                         <div>
-                                            <h4 class="mb-0">80+</h4>
+                                            <h4 class="mb-0">20+</h4>
                                             <span> Team Member</span>
                                         </div>
                                     </li>
@@ -1208,8 +1106,7 @@ body, html {
                                 <ul class="list-unstyled mb-0">
                                     <li class="d-md-flex justify-content-between align-items-center mb-3">
                                         <div class="me-3">
-                                            <img src="assets/img/icons/st-1.png" class="img-fluid mb-3 mb-md-0"
-                                                alt="icons" />
+                                           
                                         </div>
                                         <div>
                                             <span class="text-orange fw-bold">Step 1</span>
@@ -1224,8 +1121,7 @@ body, html {
                                     </li>
                                     <li class="d-md-flex justify-content-between align-items-center mb-3">
                                         <div class="me-3">
-                                            <img src="assets/img/icons/st-2.png" class="img-fluid mb-3 mb-md-0"
-                                                alt="icons" />
+                                            
                                         </div>
                                         <div>
                                             <span class="text-orange fw-bold">Step 2</span>
@@ -1240,8 +1136,7 @@ body, html {
                                     </li>
                                     <li class="d-md-flex justify-content-between align-items-center">
                                         <div class="me-3">
-                                            <img src="assets/img/icons/st-3.png" class="img-fluid mb-3 mb-md-0"
-                                                alt="icons" />
+                                            
                                         </div>
                                         <div>
                                             <span class="text-orange fw-bold">Step 3</span>
@@ -1373,28 +1268,7 @@ body, html {
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-3">
-                        <div class="int-icon-one position-relative">
-                            <ul class="list-unstyled mb-0 d-none d-lg-block">
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/fa.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/fi.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/slack.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/inst.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/er.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/google.svg" alt="icon" />
-                                </li>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <div class="col-lg-6">
                         <div class="text-center">
@@ -1405,34 +1279,13 @@ body, html {
                             <h2 class="mb-4">Get Free First Consultation now!</h2>
                             <div>
                                 <a href="contact-us.html" class="btn rounded-pill bg-orange me-3 mb-3">Get in touch</a>
-                                <a href="integrations.html" class="btn rounded-pill btn-outline-light mb-3">Explore more
+                                <a href="about-us.html" class="btn rounded-pill btn-outline-light mb-3">Explore more
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="int-icon-two position-relative">
-                            <ul class="list-unstyled mb-0 d-none d-lg-block">
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/slash.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/tree.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/drive.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/in.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/star.svg" alt="icon" />
-                                </li>
-                                <li>
-                                    <img src="assets/img/digital-marketing/int-icon/twi.svg" alt="icon" />
-                                </li>
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1653,8 +1506,6 @@ body, html {
             <!--footer top start-->
             <!--for light footer add .footer-light class and for dark footer add .bg-dark .text-white class-->
             <div class="footer-top bg-dark text-white ptb-120 position-relative">
-                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
-                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
                 <div class="container">
                     <div class="row justify-content-between">
                         <!-- SYTE Consultants Info -->

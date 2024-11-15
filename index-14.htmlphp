@@ -1029,7 +1029,7 @@
 
         <!-- Integration Start -->
         <section class="digi-integration bg-dark position-relative"
-            style="background: url('assets/img/page-header-bg.svg')no-repeat center bottom">
+            style="background: url('')no-repeat center bottom">
             <div class="digi-testimonial">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -1411,7 +1411,7 @@
             <!--footer top start-->
             <!--for light footer add .footer-light class and for dark footer add .bg-dark .text-white class-->
             <div class="footer-top bg-dark text-white ptb-120"
-                style="background: url('assets/img/page-header-bg.svg') no-repeat bottom right">
+                style="background: url('') no-repeat bottom right">
                 <div class="container">
                     <div class="row justify-content-between">
                         <!-- SYTE Consultants Info -->
